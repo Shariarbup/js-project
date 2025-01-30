@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 1%;
+}
+
+.container input {
+    padding: 10px;
+}
+
+.container button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.container button:hover {
+    background-color: antiquewhite;
+    color: #000;
+}
+
+.input-copy {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+
+.toast-message {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: green;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.toast-message-slide-in {
+    animation: toast-animation-in 0.5s ease-in;
+
+}
+
+.toast-message-slide-out {
+    animation: toast-animation-out 0.5s ease-in;
+
+}
+
+@keyframes toast-animation-in {
+    from {
+        /* j position e ashe oi position theke right side e 200px shift hoi */
+        transform: translateX(200px);  
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+    
+}
+
+@keyframes toast-animation-out {
+    from {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    
+}
