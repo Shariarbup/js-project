@@ -10,3 +10,11 @@
     height: 100vh;
     gap: 1%;
 }
+
+.container input {
+    padding: 10px;
+}
+
+.container button {
+    padding: 10px;
+}
