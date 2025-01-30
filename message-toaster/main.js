@@ -54,3 +54,20 @@ function generateMessageToaster(msg) {
     
     document.body.appendChild(div);
 }
+
+/***
+
+* @param {string} color
+ */
+function isHexValid(color) {
+    if(color.length !== 7) {
+        return false;
+    }
+
+    if(color[0] !== '#') {
+        return false;
+    }
+    color = color.substring(1);
+
+    return /^[0-9A-Fa-f]{6}$/i.test(color);
+}
